@@ -1,0 +1,13 @@
+llama-server -hf bartowski/Qwen2.5-7B-Instruct-GGUF:Q4_K_M \
+  --host 0.0.0.0 \
+  --port 4444 \
+  -ngl 99 \
+  -fa on \
+  -c 16384 \
+  -t 6 \
+  -b 2048 \
+  -ub 512 \
+  --temp 0.7 \
+  --top-p 0.8 \
+  --top-k 20 \
+  --repeat-penalty 1.05
