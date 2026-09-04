@@ -1,6 +1,6 @@
 llama-server -hf Qwen/Qwen2.5-7B-Instruct-GGUF:Q4_K_M \
   --host 0.0.0.0 \
-  --port 4444 \
+  --port 10000 \
   -ngl 99 \
   -fa on \
   -c 16384 \
