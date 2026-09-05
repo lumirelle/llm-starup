@@ -3,11 +3,8 @@ llama-server -hf Qwen/Qwen2.5-7B-Instruct-GGUF:Q4_K_M \
   --port 10000 \
   -ngl 99 \
   -fa on \
-  -c 16384 \
-  -t 6 \
-  -b 2048 \
-  -ub 512 \
+  -c 32768 \
   --temp 0.7 \
-  --top-p 0.8 \
-  --top-k 20 \
-  --repeat-penalty 1.05
+  --top-k 40 \
+  --top-p 0.9 \
+  --repeat-penalty 1.1
