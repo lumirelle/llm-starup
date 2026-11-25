@@ -1,0 +1,20 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+[tasks.basic]
+run = '''
+{% if os() == "linux" %}
+sh -c server/basic/qwen3.8-27B-GGUF-UD-IQ3_S.sh
+{% else %}
+echo "Please run this script on Linux or WSL!"
+{% endif %}
+'''
+
+[tasks.lite]
+run = '''
+{% if os() == "linux" %}
+sh -c server/lite/qwen3.5-9B-GGUF-Q4_K_M.sh
+{% else %}
+echo "Please run this script on Linux or WSL!"
+{% endif %}
+'''
+
