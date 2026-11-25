@@ -1,20 +1,23 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
+# basic: Qwen3.8-27B UD-Q3_K_XL, 32K ctx — target 16 GB VRAM
 [tasks.basic]
+description = "Qwen3.8-27B UD-Q3_K_XL, 32K ctx — target 16 GB VRAM"
 run = '''
 {% if os() == "linux" %}
-sh -c server/basic/qwen3.8-27B-GGUF-UD-IQ3_S.sh
+sh server/basic/qwen3.8-27b-UD-Q3_K_XL.sh
 {% else %}
 echo "Please run this script on Linux or WSL!"
 {% endif %}
 '''
 
+# lite: Qwen3.5-9B UD-Q4_K_XL, 32K ctx — target 8 GB VRAM
 [tasks.lite]
+description = "Qwen3.5-9B UD-Q4_K_XL, 32K ctx — target 8 GB VRAM"
 run = '''
 {% if os() == "linux" %}
-sh -c server/lite/qwen3.5-9B-GGUF-Q4_K_M.sh
+sh server/lite/qwen3.5-9b-UD-Q4_K_XL.sh
 {% else %}
 echo "Please run this script on Linux or WSL!"
 {% endif %}
 '''
-
